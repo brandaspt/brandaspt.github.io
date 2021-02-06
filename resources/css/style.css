@@ -1,0 +1,74 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../images/headshot.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 600px;
+}
+
+/* Place text in the middle of the image */
+.hero-contents {
+  text-align: center;
+  color: white;
+}
+
+.hero-contents h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  margin-top: 6em;
+  margin-bottom: 0px;
+  padding: 0px;
+  font-weight: normal;
+}
+
+.hero-contents h2 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.hero-contents p {
+  font-weight: bold;
+  color: darkgray;
+  padding: 0px;
+  margin-top: 10px;
+}
+
+.top-nav ul {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.top-nav ul li {
+  display: block;
+  position: relative;
+  float: left;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+}
+
+.top-nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 4px;
+  white-space: nowrap;
+}
