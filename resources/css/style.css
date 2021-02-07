@@ -4,35 +4,32 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Header section. Includes top nav, hero image, hero contents */
 header {
   text-align: center;
+  color: white;
 }
-
+/* Hero image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url(../images/headshot.jpg);
+    url(../images/headshot.jpeg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   position: relative;
-  height: 600px;
 }
-
-/* Place text in the middle of the image */
-.hero-contents {
-  text-align: center;
-  color: white;
-}
-
+/* Hero contents */
+/* Hero contents - H1 */
 .hero-contents h1 {
   font-family: "Courier New", Courier, monospace;
   font-size: 40px;
+  font-weight: normal;
   margin-top: 6em;
   margin-bottom: 0px;
   padding: 0px;
-  font-weight: normal;
 }
 
+/* Hero contents - H2 */
 .hero-contents h2 {
   font-size: 40px;
   font-weight: bold;
@@ -41,13 +38,23 @@ header {
   padding: 0px 0px 0px 0px;
 }
 
+/* Hero contents - 1st p */
 .hero-contents p {
   font-weight: bold;
   color: darkgray;
-  padding: 0px;
+  padding: 0px 0px 100px 0px;
   margin-top: 10px;
 }
 
+/* Hero contents - 2nd p */
+#in-construction {
+  font-weight: normal;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px 0px 20px 0px;
+}
+
+/* Navigation */
 .top-nav ul {
   display: inline-block;
   margin-top: 15px;
@@ -71,4 +78,9 @@ header {
   font-weight: bold;
   margin-left: 4px;
   white-space: nowrap;
+}
+
+/* Main section. Includes "Who am I?", "What have I been doing?" and "What do I like to do?" */
+h2 {
+  text-align: center;
 }
