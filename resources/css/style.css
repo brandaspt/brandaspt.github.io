@@ -49,6 +49,7 @@ header {
 /* Hero contents - 2nd p */
 #in-construction {
   font-weight: normal;
+  line-height: 2;
   margin-top: 0px;
   margin-bottom: 0px;
   padding: 0px 0px 20px 0px;
@@ -81,6 +82,69 @@ header {
 }
 
 /* Main section. Includes "Who am I?", "What have I been doing?" and "What do I like to do?" */
-h2 {
+/* H2 - Section separators */
+section {
+  padding: 20px 0px;
+}
+
+.separator {
+  width: 75%;
   text-align: center;
+  color: darkgray;
+  border-bottom: 2px solid darkgray;
+  line-height: 0.1em;
+  margin: 50px auto 50px;
+  padding: 0px 0px;
+}
+
+.separator span {
+  background: white;
+  position: relative;
+  padding: 15px 30px;
+}
+
+/* Section body */
+main p {
+  line-height: 2;
+  margin: 0 10% 0;
+}
+
+.responsive {
+  display: block;
+  margin: 10px auto;
+  max-width: 75%;
+  height: auto;
+}
+
+/* Footer */
+
+/* Social icons */
+.social-icons img {
+  height: 34px;
+  width: 34px;
+}
+
+ul.social-icons {
+  text-align: center;
+  list-style: none;
+  padding: 0px;
+  display: block;
+}
+
+ul.social-icons li {
+  display: inline-block;
+  margin: 0px 15px;
+}
+
+hr {
+  color: darkgray;
+}
+
+footer p {
+  text-align: center;
+  color: darkgray;
+  font-style: italic;
+  font-size: 15px;
+  padding: 0;
+  margin: 0px 0px 15px 0px;
 }
