@@ -35,7 +35,7 @@ header {
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 0px;
-  padding: 0px 0px 0px 0px;
+  padding: 0;
 }
 
 /* Hero contents - 1st p */
@@ -85,29 +85,25 @@ header {
 /* H2 - Section separators */
 section {
   padding: 20px 0px;
+  text-align: center;
 }
 
 .separator {
-  width: 75%;
   text-align: center;
   color: darkgray;
-  border-bottom: 2px solid darkgray;
-  line-height: 0.1em;
-  margin: 50px auto 50px;
-  padding: 0px 0px;
-  white-space: nowrap;
+  margin: 40px 0;
 }
 
-.separator span {
-  background: white;
-  position: relative;
-  padding: 15px 30px;
+span {
+  padding: 10px 10px;
+  border: 2px solid darkgray;
 }
 
 /* Section body */
 main p {
   line-height: 2;
   margin: 0 10% 0;
+  text-align: left;
 }
 
 .responsive {
