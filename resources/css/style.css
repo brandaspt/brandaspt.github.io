@@ -81,7 +81,7 @@ header {
   white-space: nowrap;
 }
 
-/* Main section. Includes "Who am I?", "What have I been doing?" and "What do I like to do?" */
+/* Main section. Includes "About me", "Education", "Work" and "Interests & Hobbies" */
 /* H2 - Section separators */
 section {
   padding: 20px 0px;
@@ -95,23 +95,50 @@ section {
 }
 
 span {
-  padding: 10px 10px;
+  padding: 0px 15px;
   border: 2px solid darkgray;
 }
 
 /* Section body */
 main p {
   line-height: 2;
-  margin: 0 10% 0;
-  text-align: left;
+  margin: 0 10%;
+  text-align: justify;
 }
 
+/* About me section */
+.gallery {
+  margin: 20px auto;
+}
+
+.gallery img {
+  display: inline;
+  max-height: 300px;
+  margin: 5px 5px;
+  transition: transform 0.2s;
+}
+
+.gallery img:hover {
+  transform: scale(1.5);
+}
+
+.gallery p {
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Education section */
+
+/* Work section */
 .responsive {
   display: block;
   margin: 10px auto;
   max-width: 75%;
   height: auto;
 }
+
+/* Interests & Hobbies section */
 
 /* Footer */
 
