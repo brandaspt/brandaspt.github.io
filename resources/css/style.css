@@ -9,6 +9,33 @@ header {
   text-align: center;
   color: white;
 }
+
+/* Navigation */
+.top-nav {
+  background-color: black;
+  margin: 0 auto;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.top-nav a {
+  text-decoration: underline;
+  color: white;
+  margin: 0 15px;
+}
+
+.top-nav a:hover {
+  font-style: italic;
+}
+
+/* Div correcting the offset caused by top nav being 'position: fixed' */
+.offset {
+  height: 59px;
+}
+
 /* Hero image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -20,81 +47,55 @@ header {
 }
 /* Hero contents */
 /* Hero contents - H1 */
-.hero-contents h1 {
+.hero-image h1 {
   font-family: "Courier New", Courier, monospace;
   font-size: 40px;
+  padding-top: 6em;
   font-weight: normal;
-  margin-top: 6em;
-  margin-bottom: 0px;
-  padding: 0px;
+  margin: 0;
 }
 
 /* Hero contents - H2 */
-.hero-contents h2 {
+.hero-image h2 {
   font-size: 40px;
   font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 15px auto;
   padding: 0;
 }
 
 /* Hero contents - 1st p */
-.hero-contents p {
+.hero-image p {
   font-weight: bold;
   color: darkgray;
-  padding: 0px 0px 100px 0px;
-  margin-top: 10px;
+  margin: 0px auto 100px;
 }
 
 /* Hero contents - 2nd p */
 #in-construction {
   font-weight: normal;
+  font-style: italic;
   line-height: 2;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px 0px 20px 0px;
-}
-
-/* Navigation */
-.top-nav ul {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.top-nav ul li {
-  display: block;
-  position: relative;
-  float: left;
-  text-align: center;
-  padding: 0px 20px 0px 20px;
-}
-
-.top-nav ul li a {
-  display: block;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  margin-left: 4px;
-  white-space: nowrap;
+  padding: 20px 0px;
+  margin: 0 auto;
 }
 
 /* Main section. Includes "About me", "Education", "Work" and "Interests & Hobbies" */
 /* H2 - Section separators */
-section {
-  padding: 20px 0px;
+section,
+footer {
+  padding-top: 50px;
   text-align: center;
+  display: block;
 }
 
 .separator {
   text-align: center;
   color: darkgray;
-  margin: 40px 0;
+  display: block;
+  margin: 40px auto;
 }
 
-span {
+h2 span {
   padding: 0px 15px;
   border: 2px solid darkgray;
 }
@@ -108,11 +109,11 @@ main p {
 
 /* About me section */
 .gallery {
-  margin: 20px auto;
+  margin: 20px auto 0;
 }
 
 .gallery img {
-  display: inline;
+  display: inline-block;
   max-height: 300px;
   margin: 5px 5px;
   transition: transform 0.2s;
@@ -129,6 +130,17 @@ main p {
 }
 
 /* Education section */
+table {
+  margin: 0 10%;
+}
+
+.txt-next-to-img img {
+  margin: 0 20px 0 0;
+}
+
+.txt-next-to-img p {
+  margin: 0;
+}
 
 /* Work section */
 .responsive {

@@ -9,25 +9,24 @@
     <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
   </head>
   <body>
-    <header class="hero-image">
-      <div class="hero-contents">
-        <nav class="top-nav">
-          <ul>
-            <li><a href="#about">About me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#Work">Work</a></li>
-            <li><a href="#interests">Interests & Hobbies</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
+    <header>
+      <nav class="top-nav">          
+        <a href="#about">About me</a>
+        <a href="#education">Education</a>
+        <a href="#work">Work</a></li>
+        <a href="#interests">Interests & Hobbies</a>
+        <a href="#contact">Contact</a>          
+      </nav>
+      <div class="offset"></div>
+
+      <div class="hero-image">
+        
         <h1>Hello Digital World!</h1>
         <h2>I'm Tiago</h2>
         <p>AND THIS IS MY WEB CORNER</p>
         <p id="in-construction">
-          <em
-            >(I'm building this website while I learn how to code. <br />
+          I'm building this website while I learn how to code. <br />
             Apologies for not being mobile friendly yet - or any other issues. I will get there!)
-          </em>
         </p>
       </div>
     </header>
@@ -38,7 +37,7 @@
         <p>
           My name is Tiago Brandao and I was born in the beautiful city of Porto (Portugal) in 1987.
           I've lived pretty much all my life across the river Douro, in a place called Vila Nova de
-          Gaia, where I went to high-school. I own a Master's Degree in Environmental Engineering
+          Gaia, where I went to highschool. I own a Master's Degree in Environmental Engineering
           from the University of Porto - School of Engineering. <br />
           I have lived/worked in 3 countries: Portugal, United Kingdom and Australia. I have
           recently started a new adventure, having moved to Stockholm (Sweden) in February 2021.
@@ -56,16 +55,38 @@
 
       <section id="education">
         <h2 class="separator"><span>Education</span></h2>
-        <div class="txt-next-to-img">
-          
-          <p>
-          I graduated in 2013 with a Master's Degree in Environmental Engineer from the Porto
-          University - School of Engineering... ljlkjsfdljf lkjSLJlkjdf lajsflkjaskjlf l jasjlkjf
-          ljasfjf lsajafjs kjasfkjf lkjasfjajsf ljasfjasfj lkjasf asfjlkjalasf jsajasfjklasfj jjl
-        </p>
-
-        </div>
-        
+        <table class="txt-next-to-img">
+          <tr>
+            <td>
+              <img height="60px" src="resources/images/education/ines-castro-logo.png" alt="" />
+            </td>
+            <td>
+              <p>
+                I went to school at Escola Inês de Castro. I lived 5 minutes walking from it so I
+                was never late!
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img height="170px" src="resources/images/education/colegio-gaia-logo.png" alt="" />
+            </td>
+            <td><p>I went to highschool at Colégio de Gaia.</p></td>
+          </tr>
+          <tr>
+            <td>
+              <img height="190px" src="resources/images/education/feup-logo.png" alt="" />
+            </td>
+            <td>
+              <p>
+                I graduated in 2013 with a Master's Degree in Environmental Engineer from the Porto
+                University - School of Engineering... ljlkjsfdljf lkjSLJlkjdf lajsflkjaskjlf l
+                jasjlkjf ljasfjf lsajafjs kjasfkjf lkjasfjajsf ljasfjasfj lkjasf asfjlkjalasf
+                jsajasfjklasfj jjl
+              </p>
+            </td>
+          </tr>
+        </table>
       </section>
 
       <section id="work">
