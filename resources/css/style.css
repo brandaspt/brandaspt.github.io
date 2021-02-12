@@ -31,9 +31,19 @@ header {
   font-style: italic;
 }
 
-/* Div correcting the offset caused by top nav being 'position: fixed' */
-.offset {
-  height: 59px;
+/* Main section. Includes Hero Image, "About me", "Education", "Work" and "Interests & Hobbies" */
+/* H2 - Section separators */
+section,
+footer {
+  padding-top: 50px;
+  text-align: center;
+  display: block;
+}
+
+/* Correcting the offset caused by top nav being 'position: fixed' */
+main {
+  position: relative;
+  top: 59px;
 }
 
 /* Hero image */
@@ -53,6 +63,8 @@ header {
   padding-top: 6em;
   font-weight: normal;
   margin: 0;
+  text-align: center;
+  color: white;
 }
 
 /* Hero contents - H2 */
@@ -61,11 +73,14 @@ header {
   font-weight: bold;
   margin: 15px auto;
   padding: 0;
+  text-align: center;
+  color: white;
 }
 
 /* Hero contents - 1st p */
 .hero-image p {
   font-weight: bold;
+  text-align: center;
   color: darkgray;
   margin: 0px auto 100px;
 }
@@ -74,18 +89,10 @@ header {
 #in-construction {
   font-weight: normal;
   font-style: italic;
+  text-align: center;
   line-height: 2;
   padding: 20px 0px;
   margin: 0 auto;
-}
-
-/* Main section. Includes "About me", "Education", "Work" and "Interests & Hobbies" */
-/* H2 - Section separators */
-section,
-footer {
-  padding-top: 50px;
-  text-align: center;
-  display: block;
 }
 
 .separator {
