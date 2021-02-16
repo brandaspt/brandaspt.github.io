@@ -1,69 +1,77 @@
-body {
+/* Global Selectors*/
+* {
   margin: 0px;
   padding: 0px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
 }
 
-/* Header section. Includes top nav, hero image, hero contents */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10%;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+/* Header section. Includes top navigation */
 header {
   text-align: center;
   color: white;
+  height: 60px;
 }
 
 /* Navigation */
 .top-nav {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   background-color: black;
-  margin: 0 auto;
   padding: 20px 0;
-  text-align: center;
   position: fixed;
   width: 100%;
   z-index: 10;
+  height: 60px;
 }
 
 .top-nav a {
   text-decoration: underline;
   color: white;
-  margin: 0 15px;
 }
 
 .top-nav a:hover {
   font-style: italic;
 }
 
-/* Main section. Includes Hero Image, "About me", "Education", "Work" and "Interests & Hobbies" */
-/* H2 - Section separators */
-section,
-footer {
-  padding-top: 50px;
-  text-align: center;
-  display: block;
-}
-
-/* Correcting the offset caused by top nav being 'position: fixed' */
-main {
-  position: relative;
-  top: 59px;
-}
-
-/* Hero image */
+/* Hero Image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/headshot.jpeg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  position: relative;
+  height: 700px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 /* Hero contents */
+.hero-contents {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 50%;
+}
 /* Hero contents - H1 */
 .hero-image h1 {
   font-family: "Courier New", Courier, monospace;
   font-size: 40px;
-  padding-top: 6em;
   font-weight: normal;
-  margin: 0;
-  text-align: center;
   color: white;
 }
 
@@ -71,57 +79,55 @@ main {
 .hero-image h2 {
   font-size: 40px;
   font-weight: bold;
-  margin: 15px auto;
-  padding: 0;
-  text-align: center;
   color: white;
 }
 
 /* Hero contents - 1st p */
 .hero-image p {
   font-weight: bold;
-  text-align: center;
-  color: darkgray;
-  margin: 0px auto 100px;
+  color: darkgray;  
 }
 
 /* Hero contents - 2nd p */
 #in-construction {
   font-weight: normal;
   font-style: italic;
-  text-align: center;
-  line-height: 2;
-  padding: 20px 0px;
-  margin: 0 auto;
+}
+
+/* Main section. Includes "About me", "Education", "Work" and "Interests & Hobbies" */
+/* H2 - Section separators */
+section {
+  padding-top: 30px;
+  text-align: center;  
 }
 
 .separator {
   text-align: center;
-  color: darkgray;
+  color: white;
   display: block;
   margin: 40px auto;
 }
 
 h2 span {
-  padding: 0px 15px;
-  border: 2px solid darkgray;
+  padding: 3px 15px;
+  background-color: black;
 }
 
 /* Section body */
-main p {
+section p {
   line-height: 2;
-  margin: 0 10%;
   text-align: justify;
 }
 
 /* About me section */
 .gallery {
-  margin: 20px auto 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .gallery img {
-  display: inline-block;
-  max-height: 300px;
+  max-height: 200px;
   margin: 5px 5px;
   transition: transform 0.2s;
 }
@@ -130,36 +136,47 @@ main p {
   transform: scale(1.5);
 }
 
-.gallery p {
+.caption {
   font-style: italic;
   font-size: 14px;
   text-align: center;
 }
 
 /* Education section */
-table {
-  margin: 0 10%;
+.bottom-border {
+  border-bottom: 1px solid darkgrey;
 }
 
-.txt-next-to-img img {
-  margin: 0 20px 0 0;
+#education ul {
+  text-align: left;
+  line-height: 2;
+  margin-left: 10%;
+  margin-bottom: 1em;
 }
 
-.txt-next-to-img p {
-  margin: 0;
+#education img {
+  margin: 15px 0 5px 0;
 }
 
 /* Work section */
 .responsive {
   display: block;
   margin: 10px auto;
-  max-width: 75%;
+  max-width: 100%;
   height: auto;
+  border: 1px solid darkgrey;
+}
+
+.date-range {
+  text-align: center;
+  font-weight: bold;
+  margin: 30px 0 5px 0;
+  padding: 0 5px;
+  border: 1px solid darkgrey; 
+  display: inline-block;
 }
 
 /* Interests & Hobbies section */
-
-/* Footer */
 
 /* Social icons */
 .social-icons img {
@@ -181,6 +198,16 @@ ul.social-icons li {
 
 hr {
   color: darkgray;
+}
+
+/* Footer */
+footer {
+  padding-top: 30px;
+  text-align: center; 
+}
+
+footer ul {
+  margin: 70px 0;
 }
 
 footer p {
