@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qYX4P1U6y10tBx1iC6I-mnSJUBm8cGjI6p2Lh9cuUnA" />
     <title>Hey I'm Tiago!</title>
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" />    
   </head>
   <body>
     <header>
@@ -16,9 +16,11 @@
         <a href="#work">Work</a>
         <a href="#interests">Interests & Hobbies</a>
         <a href="#contact">Contact</a>
-      </nav>
+      </nav>       
     </header>
-    <div class="hero-image">
+    
+    <main>
+      <div class="hero-image">
       <div class="hero-contents">
         <h1>Hello Digital World!</h1>
         <h2>I'm Tiago</h2>
@@ -29,7 +31,6 @@
         </p>
       </div>
     </div>
-    <main>
       <section id="about">
         <h2 class="separator"><span>About me</span></h2>
         <p>
@@ -42,51 +43,50 @@
           I have lived/worked in 3 countries: Portugal, United Kingdom and Australia. I have
           recently started a new adventure, having moved to Stockholm (Sweden) in February 2021.
         </p>
-        <p>My main field of expertise is the development of renewable energy projects.</p>
+        <p>My main field of expertise is the development of renewable energy projects.</p>        
         <div class="gallery">
-          <img src="resources/images/about-me/Porto1.jpeg" alt="" />
-          <img src="resources/images/about-me/Porto3.jpeg" alt="" />
-          <img src="resources/images/about-me/Porto2.jpeg" alt="" />
+          <img class="img-to-modal" src="resources/images/about-me/Porto1.jpeg" alt="" />
+          <img class="img-to-modal" src="resources/images/about-me/Porto2.jpeg" alt="" />
+          <img class="img-to-modal" src="resources/images/about-me/Porto3.jpeg" alt="" />
         </div>
-        <p class="caption">
+        <p class="gallery-caption">
           The beautiful skyline of Porto and its gorgeuos river Douro and D. Luis I bridge.
         </p>
+        <div class="modal">     
+          <img class="modal-img">
+          <span class="close">close</span>          
+        </div>  
+             
       </section>
 
       <section id="education">
-        <h2 class="separator"><span>Education</span></h2>
-      
+        <h2 class="separator"><span>Education</span></h2>      
             <img
               class="edu-logo"
               height="60px"
               src="resources/images/education/ines-castro-logo.png"
               alt=""
-            />
-          
+            />          
             <p class="bottom-border">
               I went to school at Escola Inês de Castro. I lived five minutes walking distance so I
               was never late!
-            </p>
-          
+            </p>          
             <img
               class="edu-logo"
               height="140px"
               src="resources/images/education/colegio-gaia-logo.png"
               alt=""
-            />
-          
+            />          
             <p class="bottom-border">
               I went to highschool at Colégio de Gaia where I obtained a Level III Certificate in
               Informatics and Computing. This was where I gave my first steps in programming.
-            </p>
-          
+            </p>          
             <img
               class="edu-logo"
               height="140px"
               src="resources/images/education/feup-logo.png"
               alt=""
-            />
-          
+            />          
             <p>
               I graduated in 2013 with a Master's Degree in Environmental Engineer from the Porto
               University - School of Engineering. Some of the main subjects of this course were:
@@ -162,5 +162,6 @@
         all rights reserved
       </p>
     </footer>
+    <script src="./resources/js/main.js"></script>  
   </body>
 </html>

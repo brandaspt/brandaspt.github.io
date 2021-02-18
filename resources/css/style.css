@@ -10,7 +10,6 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 10%;
 }
 
 p {
@@ -33,7 +32,7 @@ header {
   padding: 20px 0;
   position: fixed;
   width: 100%;
-  z-index: 10;
+  z-index: 1;
   height: 60px;
 }
 
@@ -46,6 +45,7 @@ header {
   font-style: italic;
 }
 
+/* Main section. Includes "Hero Image", "About me", "Education", "Work" and "Interests & Hobbies" */
 /* Hero Image */
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -53,7 +53,8 @@ header {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 650px;
+  width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: center;
@@ -85,7 +86,7 @@ header {
 /* Hero contents - 1st p */
 .hero-image p {
   font-weight: bold;
-  color: darkgray;  
+  color: darkgray;
 }
 
 /* Hero contents - 2nd p */
@@ -94,13 +95,7 @@ header {
   font-style: italic;
 }
 
-/* Main section. Includes "About me", "Education", "Work" and "Interests & Hobbies" */
 /* H2 - Section separators */
-section {
-  padding-top: 30px;
-  text-align: center;  
-}
-
 .separator {
   text-align: center;
   color: white;
@@ -114,6 +109,12 @@ h2 span {
 }
 
 /* Section body */
+section {
+  padding-top: 30px;
+  text-align: center;
+  margin: 0 10%;
+}
+
 section p {
   line-height: 2;
   text-align: justify;
@@ -133,13 +134,74 @@ section p {
 }
 
 .gallery img:hover {
-  transform: scale(1.5);
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-.caption {
+.gallery-caption {
   font-style: italic;
   font-size: 14px;
   text-align: center;
+  line-height: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;  
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: auto;
+}
+
+.modal-img {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 630px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-img, #modal-caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)}
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  display: inline-block;
+  text-align: center;
+  margin: 2px auto 0;
+  padding: 0 5px;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.3s;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(151, 151, 151);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px){
+  .modal-img {
+    width: 99%;
+  }
 }
 
 /* Education section */
@@ -172,12 +234,11 @@ section p {
   font-weight: bold;
   margin: 30px 0 5px 0;
   padding: 0 5px;
-  border: 1px solid darkgrey; 
+  border: 1px solid darkgrey;
   display: inline-block;
 }
 
 /* Interests & Hobbies section */
-
 /* Social icons */
 .social-icons img {
   height: 34px;
@@ -203,7 +264,7 @@ hr {
 /* Footer */
 footer {
   padding-top: 30px;
-  text-align: center; 
+  text-align: center;
 }
 
 footer ul {
