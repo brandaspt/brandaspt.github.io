@@ -2,16 +2,18 @@
 const modal = document.getElementsByClassName("modal")[0]
 
 // Get 'about' section to delegate
-const delegation = document.getElementById("about")
+const delegation = document.getElementById("about-me")
 
 // Get the modal content image
 const modalImg = document.getElementsByClassName("modal-img")[0]
 
 // Using bubbling to delegate events
-delegation.onclick = function (event) {
-    if (event.target.className == "img-to-modal") {
-        modal.style.display = "block"
-        modalImg.src = event.target.src
+if (window.innerWidth > 400) {
+    delegation.onclick = function (event) {
+        if (event.target.className == "img-to-modal") {
+            modal.style.display = "block"
+            modalImg.src = event.target.src
+        }
     }
 }
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="google-site-verification" content="qYX4P1U6y10tBx1iC6I-mnSJUBm8cGjI6p2Lh9cuUnA" />
     <title>Hey I'm Tiago!</title>
-    <link rel="stylesheet" href="resources/css/style.css" type="text/css" />    
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" />
   </head>
   <body>
     <header>
@@ -16,23 +16,26 @@
         <a href="#work">Work</a>
         <a href="#interests">Interests & Hobbies</a>
         <a href="#contact">Contact</a>
-      </nav>       
+      </nav>
     </header>
-    
+
     <main>
       <div class="hero-image">
-      <div class="hero-contents">
-        <h1>Hello Digital World!</h1>
-        <h2>I'm Tiago</h2>
-        <p>AND THIS IS MY WEB CORNER</p>
-        <p id="in-construction">
-          (P.S. I'm building this website while I learn how to code. <br />
-          Apologies for not being mobile friendly yet - or any other issues. I will get there!)
-        </p>
+        <div class="hero-contents">
+          <h1>Hello Digital World!</h1>
+          <h2>I'm Tiago</h2>
+          <p>AND THIS IS MY WEB CORNER</p>
+          <p id="in-construction">
+            (P.S. I'm building this website while I learn how to code. <br />
+            Apologies for not being mobile friendly yet - or any other issues. I will get there!)
+          </p>
+        </div>
       </div>
-    </div>
-      <section id="about">
+      <div id="about">
         <h2 class="separator"><span>About me</span></h2>
+      </div>
+
+      <section id="about-me">
         <p>
           My name is Tiago Brandao and I was born in the beautiful city of Porto (Portugal) in 1987.
           I've lived pretty much all my life across the river Douro, in a place called Vila Nova de
@@ -43,90 +46,99 @@
           I have lived/worked in 3 countries: Portugal, United Kingdom and Australia. I have
           recently started a new adventure, having moved to Stockholm (Sweden) in February 2021.
         </p>
-        <p>My main field of expertise is the development of renewable energy projects.</p>        
+        <p>My main field of expertise is the development of renewable energy projects.</p>
+        <p>
+          I've recently decided to learn a new skill set and am diving into the depths of web
+          development: HTML, CSS, JavaScript, etc.
+        </p>
         <div class="gallery">
           <img class="img-to-modal" src="resources/images/about-me/Porto1.jpeg" alt="" />
           <img class="img-to-modal" src="resources/images/about-me/Porto2.jpeg" alt="" />
           <img class="img-to-modal" src="resources/images/about-me/Porto3.jpeg" alt="" />
         </div>
         <p class="gallery-caption">
-          The beautiful skyline of Porto and its gorgeuos river Douro and D. Luis I bridge.
+          The beautiful skyline of Porto and its gorgeuos river Douro and D. Luis I bridge.<br />(click
+          images to enlarge)
         </p>
-        <div class="modal">     
-          <img class="modal-img">
-          <span class="close">close</span>          
-        </div>  
-             
-      </section>
-
-      <section id="education">
-        <h2 class="separator"><span>Education</span></h2>      
-            <img
-              class="edu-logo"
-              height="60px"
-              src="resources/images/education/ines-castro-logo.png"
-              alt=""
-            />          
-            <p class="bottom-border">
-              I went to school at Escola Inês de Castro. I lived five minutes walking distance so I
-              was never late!
-            </p>          
-            <img
-              class="edu-logo"
-              height="140px"
-              src="resources/images/education/colegio-gaia-logo.png"
-              alt=""
-            />          
-            <p class="bottom-border">
-              I went to highschool at Colégio de Gaia where I obtained a Level III Certificate in
-              Informatics and Computing. This was where I gave my first steps in programming.
-            </p>          
-            <img
-              class="edu-logo"
-              height="140px"
-              src="resources/images/education/feup-logo.png"
-              alt=""
-            />          
-            <p>
-              I graduated in 2013 with a Master's Degree in Environmental Engineer from the Porto
-              University - School of Engineering. Some of the main subjects of this course were:
-            </p>
-            <ul>
-              <li>Environmental Management</li>
-              <li>Water Treatment and Supply</li>
-              <li>Hydrology and Hydraulics</li>
-              <li>Design and Management of Waste Treatment Systems</li>
-              <li>Management of Water Resources</li>
-              <li>Climate Change and Air Quality</li>
-              <li>Planning and Land-use Management</li>
-              <li>Energy</li>
-            </ul>
-            <p class="bottom-border">
-              My Master's thesis was undertaken at Sonae Modelo Continente (one of the biggest
-              retail companies in Portugal) and was dedicated to the study of Waste Management –
-              reduction of landfill parcel.
-            </p>
-          </div>
+        <div class="modal">
+          <img class="modal-img" />
+          <span class="close">close</span>
         </div>
       </section>
-      <section id="work">
-        <h2 class="separator"><span>Work</span></h2>
+      <div id="education">
+        <h2 class="separator"><span>Education</span></h2>
+      </div>
+      <section>
+        <img
+          class="edu-logo"
+          height="60px"
+          src="resources/images/education/ines-castro-logo.png"
+          alt=""
+        />
+        <p>
+          I went to school at Escola Inês de Castro. I lived five minutes walking distance so I was
+          never late!
+        </p>
+        <hr />
+        <img
+          class="edu-logo"
+          height="140px"
+          src="resources/images/education/colegio-gaia-logo.png"
+          alt=""
+        />
+        <p>
+          I went to highschool at Colégio de Gaia where I obtained a Level III Certificate in
+          Informatics and Computing. This was where I gave my first steps in programming.
+        </p>
+        <hr />
+        <img
+          class="edu-logo"
+          height="140px"
+          src="resources/images/education/feup-logo.png"
+          alt=""
+        />
+        <p>
+          I graduated in 2013 with a Master's Degree in Environmental Engineer from the Porto
+          University - School of Engineering. Some of the main subjects of this course were:
+        </p>
+        <ul>
+          <li>Environmental Management</li>
+          <li>Water Treatment and Supply</li>
+          <li>Hydrology and Hydraulics</li>
+          <li>Design and Management of Waste Treatment Systems</li>
+          <li>Management of Water Resources</li>
+          <li>Climate Change and Air Quality</li>
+          <li>Planning and Land-use Management</li>
+          <li>Energy</li>
+        </ul>
+        <p>
+          My Master's thesis was undertaken at Sonae Modelo Continente (one of the biggest retail
+          companies in Portugal) and was dedicated to the study of Waste Management – reduction of
+          landfill parcel.
+        </p>
+        <hr />
+      </section>
+      <div id="work"><h2 class="separator"><span>Work</span></h2></div>
+      <section>
+        
         <p>
           I have been lucky enough to have been able to work in several different countries. The
           following has been my journey so far...
-        </p>      
+        </p>
         <img src="resources/images/MapChart_Map.png" class="responsive" alt="" />
         <p class="date-range">May 2019 &#8640; July 2020</p>
-        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-          nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum."</p>  
+        <p>
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum."
+        </p>
       </section>
-
-      <section id="interests">
-        <h2 class="separator"><span>Interests & Hobbies</span></h2>
+<div id="interests"><h2 class="separator"><span>Interests & Hobbies</span></h2></div>
+      <section>
+        
         <p>
           My interests/hobbies are: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
@@ -162,6 +174,6 @@
         all rights reserved
       </p>
     </footer>
-    <script src="./resources/js/main.js"></script>  
+    <script src="./resources/js/main.js"></script>
   </body>
 </html>

@@ -6,14 +6,15 @@
   box-sizing: border-box;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+p {
+  margin: 0 auto 1em;
 }
 
-p {
-  margin-bottom: 1em;
+hr {
+  height: 10px;
+  border: 2px solid darkgray;
+  border-left: none;
+  border-right: none;
 }
 
 /* Header section. Includes top navigation */
@@ -32,7 +33,7 @@ header {
   padding: 20px 0;
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
   height: 60px;
 }
 
@@ -52,21 +53,19 @@ header {
     url(../images/headshot.jpeg);
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 650px;
-  width: 100%;
+  min-height: 90vh;
   display: flex;
-  align-items: flex-end;
   justify-content: center;
 }
 /* Hero contents */
 .hero-contents {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
   flex-direction: column;
   text-align: center;
-  height: 50%;
 }
 /* Hero contents - H1 */
 .hero-image h1 {
@@ -87,24 +86,26 @@ header {
 .hero-image p {
   font-weight: bold;
   color: darkgray;
+  padding-bottom: 40px;
 }
 
 /* Hero contents - 2nd p */
 #in-construction {
   font-weight: normal;
   font-style: italic;
+  margin-bottom: 0;
 }
 
 /* H2 - Section separators */
 .separator {
-  text-align: center;
+  text-align: left;
   color: white;
   display: block;
-  margin: 40px auto;
+  padding-top: 80px;
 }
 
 h2 span {
-  padding: 3px 15px;
+  padding: 3px 15px 3px 40px;
   background-color: black;
 }
 
@@ -112,19 +113,21 @@ h2 span {
 section {
   padding-top: 30px;
   text-align: center;
-  margin: 0 10%;
+  min-width: 350px;
 }
 
 section p {
   line-height: 2;
   text-align: justify;
+  max-width: 700px;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* About me section */
 .gallery {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 .gallery img {
@@ -142,7 +145,7 @@ section p {
   font-style: italic;
   font-size: 14px;
   text-align: center;
-  line-height: 1;
+  line-height: 1.5;
 }
 
 .modal {
@@ -153,7 +156,7 @@ section p {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;  
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   overflow: auto;
 }
@@ -166,14 +169,19 @@ section p {
 }
 
 /* Add Animation - Zoom in the Modal */
-.modal-img, #modal-caption {
+.modal-img,
+#modal-caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-  from {transform:scale(0)}
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
@@ -197,27 +205,17 @@ section p {
   cursor: pointer;
 }
 
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 768px){
-  .modal-img {
-    width: 99%;
-  }
-}
-
 /* Education section */
-.bottom-border {
-  border-bottom: 1px solid darkgrey;
-}
-
-#education ul {
+section ul {
   text-align: left;
   line-height: 2;
-  margin-left: 10%;
+  margin-left: 20%;
+  margin-right: 10%;
   margin-bottom: 1em;
 }
 
-#education img {
-  margin: 15px 0 5px 0;
+.edu-logo {
+  margin: 15px 0 5px;
 }
 
 /* Work section */
@@ -257,10 +255,6 @@ ul.social-icons li {
   margin: 0px 15px;
 }
 
-hr {
-  color: darkgray;
-}
-
 /* Footer */
 footer {
   padding-top: 30px;
@@ -278,4 +272,36 @@ footer p {
   font-size: 15px;
   padding: 0;
   margin: 0px 0px 15px 0px;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 768px) {
+  .modal-img {
+    width: 99%;
+  }
+
+  .gallery {
+    flex-wrap: wrap;
+  }
+
+  .gallery img {
+    max-height: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gallery img {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  section p {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  section ul {
+    margin-left: 10%;
+    margin-right: 1%;
+  }
 }
