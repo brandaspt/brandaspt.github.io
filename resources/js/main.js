@@ -8,12 +8,10 @@ const delegation = document.getElementById("about-me")
 const modalImg = document.getElementsByClassName("modal-img")[0]
 
 // Using bubbling to delegate events
-if (window.innerWidth > 400) {
-    delegation.onclick = function (event) {
-        if (event.target.className == "img-to-modal") {
-            modal.style.display = "block"
-            modalImg.src = event.target.src
-        }
+delegation.onclick = function (event) {
+    if (event.target.className == "img-to-modal") {
+        modal.style.display = "block"
+        modalImg.src = event.target.src
     }
 }
 
