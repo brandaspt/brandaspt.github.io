@@ -2,16 +2,9 @@
 * {
   margin: 0px;
   padding: 0px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Judson', serif;
+  font-size: 20px;
   box-sizing: border-box;
-}
-
-/* Section body */
-section {
-  padding: 30px 3% 0;
-  text-align: center;
-  margin: 0 auto;
-  max-width: 850px;
 }
 
 p {
@@ -27,29 +20,116 @@ hr {
   border-right: none;
 }
 
-/* Header section. Includes top navigation */
-header {
+/* Section body */
+section {
+  padding: 30px 3% 0;
   text-align: center;
-  color: white;
-  height: 60px;
+  margin: 0 auto;
+  max-width: 850px;
 }
 
-/* Navigation */
+/* Header */
+header {
+  background-color: black;
+  border-bottom: 3px solid darkgray;
+  position: fixed;
+  transition: height 0.5s ease;
+  height: 100px;
+  width: 100%;
+}
+
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Nav bar */
+header .logo {
+  font-family: "Caveat", cursive;
+  letter-spacing: 10px;
+  color: white;
+  font-size: 3rem;
+}
+
 .top-nav {
   display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background-color: black;
-  padding: 20px 0;
-  position: fixed;
-  width: 100%;
-  z-index: 2;
-  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.top-nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  margin-left: auto;
 }
 
 .top-nav a {
-  text-decoration: underline;
-  color: white;
+  color: rgb(211, 211, 211);
+  text-shadow: 2px 2px 10px black;
+  margin-left: 20px;
+  text-align: center;
+  font-family: 'Quando', serif;
+  text-decoration: none;
+  font-size: 0.8rem;
+}
+
+button {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-family: "Caveat", cursive;
+  color: black;
+  background-color: rgb(211, 211, 211);
+  margin-left: 15px;
+  box-shadow: 0px 0px 20px white;
+  font-size: 1.4rem;
+}
+
+/* Nav Burger */
+.top-nav-burger {
+  display: none;
+}
+
+.line {
+  width: 35px;
+  height: 2px;
+  margin: 7px 0;
+  background-color: rgb(211, 211, 211);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Mobile Nav */
+.show-menu {
+  height: 50vh;
+}
+
+.show-menu .top-nav-links {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: auto;
+}
+
+.show-menu .top-nav-burger {
+  display: block;
+}
+
+.show-menu .line-top {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.show-menu .line-mid {
+  opacity: 0;
+}
+
+.show-menu .line-bot {
+  transform: translateY(-9px) rotate(-45deg);
 }
 
 .top-nav a:hover {
@@ -58,13 +138,17 @@ header {
 
 /* Main section. Includes "Hero Image", "About me", "Education", "Work" and "Interests & Hobbies" */
 /* Hero Image */
+main {
+  padding-top: 100px;
+}
+
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/headshot.jpeg);
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  min-height: 90vh;
+  min-height: 85vh;
   display: flex;
   justify-content: center;
 }
@@ -78,15 +162,15 @@ header {
 }
 /* Hero contents - H1 */
 .hero-image h1 {
-  font-family: "Courier New", Courier, monospace;
-  font-size: 40px;
+  font-family: "Caveat", cursive;
+  font-size: 3rem;
   font-weight: normal;
   color: white;
 }
 
 /* Hero contents - H2 */
 .hero-image h2 {
-  font-size: 40px;
+  font-size: 3rem;
   font-weight: bold;
   color: white;
 }
@@ -94,8 +178,9 @@ header {
 /* Hero contents - 1st p */
 .hero-image p {
   font-weight: bold;
-  color: darkgray;
+  color: white;
   padding-bottom: 40px;
+  text-align: center;
 }
 
 /* Hero contents - 2nd p */
@@ -111,10 +196,12 @@ header {
   text-align: left;
   color: white;
   display: block;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 h2 span {
+  font-family: 'Quando', serif;
+  font-size: 1.4rem;
   padding: 3px 15px 3px 40px;
   background-color: black;
 }
@@ -126,15 +213,17 @@ h2 span {
   transition: transform 0.2s;
 }
 
-.gallery-caption, .click-enlarge {
+.gallery-caption,
+.click-enlarge {
   font-style: italic;
-  font-size: 14px;
+  font-size: 0.8rem;
   text-align: center;
   line-height: 1.5;
   margin-bottom: 0;
 }
 
-.modal, .click-enlarge {
+.modal,
+.click-enlarge {
   display: none;
 }
 
@@ -202,9 +291,10 @@ footer p {
   text-align: center;
   color: darkgray;
   font-style: italic;
-  font-size: 15px;
+  font-size: 0.8rem;
+  line-height: 1.3;
   padding: 0;
-  margin: 0px 0px 15px 0px;
+  margin: 15px 0px 15px 0px;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -214,6 +304,18 @@ footer p {
     height: auto;
     max-height: max-content;
     margin: 5px auto;
+  }
+
+  .top-nav-links {
+    display: none;
+  }
+
+  .top-nav-burger {
+    display: block;
+  }
+
+  .close-button {
+    display: none;
   }
 }
 
@@ -264,13 +366,11 @@ footer p {
     display: inline-block;
     text-align: center;
     margin: 2px auto 0;
-    padding: 0 5px;
-    color: black;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 0 20px;
+    color: white;
+    font-size: 1.7rem;
+    font-family: "Indie Flower", cursive;
     transition: 0.3s;
-    background-color: white;
-    border: 2px solid black;
   }
 
   .close:hover,
