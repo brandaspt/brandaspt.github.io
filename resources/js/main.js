@@ -5,7 +5,7 @@ const caption = document.querySelectorAll(".caption")
 
 imgToExpand.forEach((element, index) => {
     element.addEventListener("click", function () {
-        if (index < 3) {
+        if (index < 8) {
             expandedImg[0].src = this.src
             caption[0].innerText = this.alt
         } else {
