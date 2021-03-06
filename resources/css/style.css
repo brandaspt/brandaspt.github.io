@@ -174,7 +174,7 @@ main {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 70px;
+  margin-bottom: 90px;
 }
 /* Hero contents - H1 */
 .hero-image h1 {
@@ -236,7 +236,7 @@ h2 span {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   max-width: 100%;
   margin-top: -2px;
   margin-bottom: 2px;
@@ -245,7 +245,7 @@ h2 span {
 .gallery-images img {
   height: 55px;
   cursor: pointer;
-  margin: 2px
+  margin: 2px;
 }
 
 .gallery-images img:hover {
@@ -255,6 +255,11 @@ h2 span {
 .gallery-expanded {
   display: flex;
   flex-direction: column;
+}
+
+.expanded-img {
+  width: 100%;
+  height: auto;
 }
 
 .caption {
