@@ -1,40 +1,19 @@
-// Get the modal
-const modal = document.getElementsByClassName("modal")[0]
+/* Image galleries */
+const imgToExpand = document.querySelectorAll(".gallery .img-to-expand")
+const expandedImg = document.querySelectorAll(".expanded-img")
+const caption = document.querySelectorAll(".caption")
 
-// Get 'about' section to delegate
-const delegation = document.getElementById("about-me")
-
-// Get the modal content image
-const modalImg = document.getElementsByClassName("modal-img")[0]
-
-// Using bubbling to delegate events
-
-delegation.onclick = function (event) {
-    if (window.innerWidth >= 790) {
-        if (event.target.className == "img-to-modal") {
-            modal.style.display = "block"
-            modalImg.src = event.target.src
+imgToExpand.forEach((element, index) => {
+    element.addEventListener("click", function () {
+        if (index < 3) {
+            expandedImg[0].src = this.src
+            caption[0].innerText = this.alt
+        } else {
+          expandedImg[1].src = this.src
+          caption[1].innerText = this.alt
         }
-    }
-}
-
-// Option to iterate through the HTML collection and create the event on each index
-/*
-for (i = 0; i < img.length; i++) {
-    img[i].addEventListener("click", function () {
-        modal.style.display = "block"
-        modalImg.src = this.src
     })
-}
-*/
-
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0]
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-    modal.style.display = "none"
-}
+})
 
 /* Top Nav Burger Menu */
 const header = document.getElementsByTagName("header")[0]
