@@ -34,13 +34,14 @@ header {
   border-bottom: 3px solid darkgray;
   position: fixed;
   transition: height 0.5s ease;
-  height: 100px;
+  height: 60px;
   width: 100%;
 }
 
 /* Nav bar */
 #logo {
   margin: 0;
+  align-self: center;
 }
 
 #logo a {
@@ -82,7 +83,7 @@ header {
 
 button {
   border: none;
-  padding: 5px 10px;
+  padding: 2px 10px;
   border-radius: 30px;
   font-family: "Caveat", cursive;
   color: black;
@@ -95,6 +96,8 @@ button {
 /* Nav Burger */
 .top-nav-burger {
   display: none;
+  align-self: flex-start;
+  margin-top: 12px;
 }
 
 .line {
@@ -107,7 +110,7 @@ button {
 
 /* Mobile Nav */
 .show-menu {
-  height: 50vh;
+  height: 100vh;
 }
 
 .show-menu .top-nav-links {
@@ -129,10 +132,6 @@ button {
   margin-left: 0;
 }
 
-.show-menu .top-nav-burger {
-  display: block;
-}
-
 .show-menu .line-top {
   transform: translateY(9px) rotate(45deg);
 }
@@ -152,7 +151,7 @@ button {
 /* Main section. Includes "Hero Image", "About me", "Education", "Work" and "Interests & Hobbies" */
 /* Hero Image */
 main {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
 .hero-image {
@@ -161,7 +160,7 @@ main {
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 60px);
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -174,7 +173,7 @@ main {
   align-items: center;
   flex-direction: column;
   text-align: center;
-  margin-bottom: 110px;
+  margin-bottom: 10px;
 }
 /* Hero contents - H1 */
 .hero-image h1 {
@@ -215,7 +214,7 @@ main {
   text-align: left;
   color: white;
   display: block;
-  padding-top: 100px;
+  padding-top: 60px;
   margin-bottom: 30px;
 }
 
@@ -243,7 +242,7 @@ h2 span {
 }
 
 .gallery-images img {
-  height: 55px;
+  width: 85px;
   cursor: pointer;
   margin: 2px;
 }
@@ -262,7 +261,8 @@ h2 span {
   height: auto;
 }
 
-.caption {
+.caption,
+#project-gallery a p {
   font-style: italic;
   font-size: 0.9rem;
   text-align: center;
@@ -357,6 +357,36 @@ h3 {
   text-decoration: underline;
 }
 
+/* Portfolio Section */
+#web-development {
+  margin-top: 50px;
+}
+
+#project-gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#project-gallery a {
+  width: 45%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.web-dev-img {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.web-dev-img:hover {
+  box-shadow: 2px 2px 3px rgb(139, 139, 139);
+}
+
 /* Social icons */
 .social-icons img {
   height: 34px;
@@ -417,6 +447,6 @@ footer p {
   }
 
   .show-menu .top-nav-links {
-    margin: 0 20px 0 auto;
+    margin: auto;
   }
 }
